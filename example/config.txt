@@ -1,0 +1,2 @@
+Prefix plugins/Pearson/example/
+Plugin Pearson inputfile abundN.csv outputfile abundN.pearson.csv
