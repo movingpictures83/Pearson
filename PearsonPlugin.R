@@ -1,9 +1,10 @@
-p_value <- 0.01;
+#p_value <- 1; # Unthresholded
+p_value <- 0.01; # Thresholded
 libs <- c("Hmisc");
 lapply(libs, require, character.only=T);
 
 input <- function(inputfile) {
-  pc <<- read.csv(inputfile, header = TRUE);
+  pc <<- read.csv(inputfile, header = TRUE, check.names=FALSE);
 }
 
 
