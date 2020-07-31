@@ -13,3 +13,6 @@ j in sample i (this file should be normalized).
 The plugin produces output Pearson correlations between community members
 as another CSV file with both rows and columns representing members and entry
 (i, j) the correlation value between member i and member j.
+
+If the output file ends in ".unthresholded.csv", correlations will not be p-value
+thresholded.  Otherwise a p-value threshold of 0.01 will be applied.
