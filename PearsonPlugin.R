@@ -1,10 +1,12 @@
 #p_value <- 1; # Unthresholded
-p_value <- 0.01; # Thresholded
+#p_value <- 0.01; # Thresholded
+p_value <- 0.05; # Thresholded
 libs <- c("Hmisc");
 lapply(libs, require, character.only=T);
 
 input <- function(inputfile) {
   pc <<- read.csv(inputfile, header = TRUE, check.names=FALSE);
+print(pc)
 }
 
 
@@ -26,6 +28,7 @@ output <- function(outputfile) {
       pc[which(correlations$P>p_value)] <<- 0;
    }
    write.table(pc, file=outputfile, sep=",", append=FALSE, row.names=unlist(cn), col.names=unlist(cn), na="");
+   print(correlations$P)
 }
 
 
